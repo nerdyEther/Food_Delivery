@@ -63,7 +63,7 @@ function AddItem({ onClose, onSuccess }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch('http://localhost:5555/api/menu', {
+      const response = await fetch('https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/menu', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -74,7 +74,7 @@ function MenuComponent() {
         )
       ).toString();
 
-      const response = await fetch(`http://localhost:5555/api/menu?${query}`);
+      const response = await fetch(`https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/menu?${query}`);
       const data = await response.json();
       
       setMenuItems(data.data.items);
@@ -111,7 +111,7 @@ function MenuComponent() {
 
   const handleUpdateClick = async (itemId) => {
     try {
-      const response = await fetch(`http://localhost:5555/api/menu/${itemId}`, {
+      const response = await fetch(`https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/menu/${itemId}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         }
@@ -138,7 +138,7 @@ function MenuComponent() {
     if (!deleteItemId) return;
     
     try {
-      const response = await fetch(`http://localhost:5555/api/menu/${deleteItemId}`, {
+      const response = await fetch(`https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/menu/${deleteItemId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('authToken')}`

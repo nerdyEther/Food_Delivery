@@ -32,7 +32,7 @@ const OrdersPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:5555/api/orders', {
+        const response = await axios.get('https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/orders', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('authToken')}`
           }
@@ -54,7 +54,7 @@ const OrdersPage = () => {
     try {
       const newStatus = currentStatus === 'Pending' ? 'Completed' : 'Pending';
       
-      const response = await axios.put(`http://localhost:5555/api/orders/${orderId}/status`, 
+      const response = await axios.put(`https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/orders/${orderId}/status`, 
         { status: newStatus },
         {
           headers: {
@@ -105,14 +105,14 @@ const OrdersPage = () => {
         totalAmount: totalAmount + 40
       };
 
-      const response = await axios.post('http://localhost:5555/api/orders', orderData, {
+      const response = await axios.post('https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/orders', orderData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`
         }
       });
 
     
-      const ordersResponse = await axios.get('http://localhost:5555/api/orders', {
+      const ordersResponse = await axios.get('https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/orders', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`
         }

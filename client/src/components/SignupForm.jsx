@@ -92,7 +92,7 @@ function SignupForm() {
     setIsLoading(true);
     setErrors(prev => ({ ...prev, api: '' }));
     try {
-      const response = await fetch('http://localhost:5555/api/register', {
+      const response = await fetch('https://querulous-karil-kuchnaamnhai-0c1f10e1.koyeb.app/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
