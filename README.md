@@ -35,8 +35,8 @@ FoodDeliver is a full-stack food ordering web application that allows users to b
 ### Order Workflow
 - Create orders
 - View order history
-- Managers and Admins can access and edit all orders
-- Regular users can only view their own orders
+- **Managers and Admins can access and edit all orders**
+- **Regular users can only view their own orders**
 - Order status tracking
   
 
